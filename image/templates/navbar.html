@@ -1,0 +1,28 @@
+<nav class="navbar navbar-expand-lg navbar-light ">
+  <img src="https://res.cloudinary.com/auca/image/upload/v1608634206/logo_fuobrk.png" class="navbar-brand"> 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+    aria-controls="navbarTogglerdemo02" aria-expanded="false" aria-label="Toggle navigaion">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+    </ul>
+    <div class="col-md-7" style="padding-top: 10px;">    
+
+        <span id="locations">
+
+          {% for location in locations %}
+          <a class="btn btn-outline-dark" id="btn"
+          href="/location/{{location.name}}" style="margin:8px">{{location.name}}</a>
+          {% endfor %}
+
+        </span>
+    
+    </div>
+    <form class="form-inline my-2 my-md-0" action="/search" role="search">
+      <input class="mr-sm-2" type="search" placeholder="Search Category" name="imagesearch"
+        aria-label="Search" style="border: 0px; border-bottom: 2px solid black; outline: none;">
+      <!-- <button class="btn btn-info btn-md my-2 my-sm-0" type="submit">Search</button> -->
+    </form>
+  </div>
+</nav>
